@@ -32,12 +32,16 @@ Without an internet connection, or when online services are off, the game only s
 If you link Google Play Games or Apple (optional), your player ID on that platform is linked to your Unity account.
 Linking with Apple does not request your name or email address.
 
-### Notifications (optional)
-Notifications are only on if you turn them on (we ask after Level 1; turn them off in Settings → Notifications):
-- **Reminders** are scheduled on your device; nothing is sent to a server.
-- **Remote notifications** (new levels, event announcements) send your device's push token and player ID to Unity
-  Push Notifications / Unity Analytics; notifications are delivered through Apple (APNs) or Google (Firebase Cloud
-  Messaging). Turning notifications off stops this data collection.
+### Our game server and notifications
+When the game starts it connects to BI Studio's server and sends: a random installation ID, device
+model and operating system, app version, language and time zone, a summary of your progress (star count, levels
+cleared, best endless wave), your Unity player ID and whether notifications are turned on. This is used to match your
+account, carry out account deletion requests and (if you allowed it) send notifications.
+
+Notifications are only on if you turn them on (we ask after Level 1; turn them off in Settings → Notifications). Your
+device's push token is then stored on our server and we send a reminder if you haven't played for a while.
+Notifications are delivered through Google (Firebase Cloud Messaging) and Apple (APNs). Turning notifications off stops
+notifications.
 
 ### Crash and error reports
 If the game crashes or hits an error, a technical report is sent to Sentry (hosted in the EU) so we can find and fix
@@ -54,7 +58,7 @@ Your data is not sold and is not used for advertising. Data is encrypted in tran
 
 ### Deleting your data
 - **In the game:** Main Menu → Account → **Delete account and data**. This deletes your cloud account, cloud save,
-  leaderboard score and the progress on your device. This cannot be undone.
+  leaderboard score, your record on our game server (including the push token) and the progress on your device. This cannot be undone.
 - **By email:** If you can no longer use the game, write to serap.bakar.app@gmail.com with your player name. We will
   complete the request within 30 days.
 - Uninstalling the game deletes the data on your device; use one of the options above for the cloud data.
@@ -94,12 +98,15 @@ Oyuncu adın ve skorun sıralamada diğer oyunculara görünür. Gerçek adını
 Google Play Games veya Apple ile hesap bağlarsan (seçmeli), o platformdaki oyuncu kimliğin Unity hesabınla eşlenir.
 Apple ile bağlarken Apple'dan ad veya e-posta istenmez.
 
-### Bildirimler (seçmeli)
-Bildirimleri yalnızca sen açarsan (Level 1'den sonra sorulur, Ayarlar → Bildirimler'den kapatılır):
-- **Hatırlatmalar** cihazında kurulur; sunucuya bir şey gönderilmez.
-- **Uzaktan bildirimler** (yeni bölüm, etkinlik duyuruları) için cihazının bildirim adresi (push token) ve oyuncu
-  kimliğin Unity Push Notifications / Unity Analytics'e gönderilir; bildirimler Apple (APNs) veya Google (Firebase
-  Cloud Messaging) üzerinden iletilir. Bildirimleri kapatınca veri toplama durur.
+### Oyun sunucumuz ve bildirimler
+Oyun açılırken BI Studio'nun sunucusuna bağlanır ve şunları gönderir: rastgele bir kurulum
+kimliği, cihaz modeli ve işletim sistemi, uygulama sürümü, dil ve saat dilimi, oyun ilerlemesinin özeti (yıldız sayısı,
+geçilen level sayısı, sonsuz moddaki en iyi dalga), Unity oyuncu kimliğin ve bildirim izninin açık olup olmadığı.
+Bunlar hesabını eşlemek, hesap silme taleplerini yerine getirmek ve (izin verdiysen) bildirim göndermek için kullanılır.
+
+Bildirimleri yalnızca sen açarsan (Level 1'den sonra sorulur, Ayarlar → Bildirimler'den kapatılır), cihazının bildirim
+adresi (push token) sunucumuza kaydedilir ve bir süre oynamadığında hatırlatma gönderilir. Bildirimler Google (Firebase
+Cloud Messaging) ve Apple (APNs) üzerinden iletilir. Bildirimleri kapatınca bildirim gönderimi durur.
 
 ### Çökme ve hata raporları
 Oyun çökerse veya bir hata olursa, sorunu bulup düzeltebilmemiz için teknik bir rapor Sentry'ye (AB'de barındırılır)
@@ -115,8 +122,8 @@ Raporlarda adın, e-postan, ekran görüntüsü veya konum yoktur. Raporlar en f
 Verilerin satılmaz ve reklam amacıyla kullanılmaz. Veriler aktarım sırasında şifrelenir (HTTPS).
 
 ### Verilerini silmek
-- **Oyun içinden:** Ana Menü → Hesap → **Hesabı ve verileri sil**. Bulut hesabın, bulut kaydın, sıralamadaki skorun ve
-  cihazındaki ilerleme silinir. Bu işlem geri alınamaz.
+- **Oyun içinden:** Ana Menü → Hesap → **Hesabı ve verileri sil**. Bulut hesabın, bulut kaydın, sıralamadaki skorun,
+  oyun sunucumuzdaki kaydın (bildirim adresi dahil) ve cihazındaki ilerleme silinir. Bu işlem geri alınamaz.
 - **E-postayla:** Oyunu artık kullanamıyorsan serap.bakar.app@gmail.com adresine yaz; oyuncu adını veya Hesap ekranındaki
   bilgiyi belirt. Talebin 30 gün içinde yerine getirilir.
 - Oyunu silmek cihazdaki kaydı siler; buluttaki kayıt için yukarıdaki yollardan birini kullan.
