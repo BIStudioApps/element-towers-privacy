@@ -39,8 +39,14 @@ Notifications are only on if you turn them on (we ask after Level 1; turn them o
   Push Notifications / Unity Analytics; notifications are delivered through Apple (APNs) or Google (Firebase Cloud
   Messaging). Turning notifications off stops this data collection.
 
+### Crash and error reports
+If the game crashes or hits an error, a technical report is sent to Sentry (hosted in the EU) so we can find and fix
+the problem: the error message and stack trace, device model, operating system version, game version and a random
+installation ID. Reports do not include your name, email, screenshots or location. Reports are kept for up to 90 days.
+
 ### Third parties
 - Unity Technologies (Unity Gaming Services): <https://unity.com/legal/privacy-policy>
+- Functional Software, Inc. (Sentry): <https://sentry.io/privacy/>
 - Google (Google Play, Google Play Games, Firebase Cloud Messaging): <https://policies.google.com/privacy>
 - Apple (Sign in with Apple, Apple Push Notification service): <https://www.apple.com/legal/privacy/>
 
@@ -95,8 +101,14 @@ Bildirimleri yalnızca sen açarsan (Level 1'den sonra sorulur, Ayarlar → Bild
   kimliğin Unity Push Notifications / Unity Analytics'e gönderilir; bildirimler Apple (APNs) veya Google (Firebase
   Cloud Messaging) üzerinden iletilir. Bildirimleri kapatınca veri toplama durur.
 
+### Çökme ve hata raporları
+Oyun çökerse veya bir hata olursa, sorunu bulup düzeltebilmemiz için teknik bir rapor Sentry'ye (AB'de barındırılır)
+gönderilir: hata mesajı ve kod izi, cihaz modeli, işletim sistemi sürümü, oyun sürümü ve rastgele bir kurulum kimliği.
+Raporlarda adın, e-postan, ekran görüntüsü veya konum yoktur. Raporlar en fazla 90 gün saklanır.
+
 ### Üçüncü taraflar
 - Unity Technologies (Unity Gaming Services): <https://unity.com/legal/privacy-policy>
+- Functional Software, Inc. (Sentry): <https://sentry.io/privacy/>
 - Google (Google Play, Google Play Games, Firebase Cloud Messaging): <https://policies.google.com/privacy>
 - Apple (Sign in with Apple, Apple Push Notification service): <https://www.apple.com/legal/privacy/>
 
